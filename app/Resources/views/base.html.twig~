@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+         <!-- Bootstrap -->
+		{% include 'BraincraftedBootstrapBundle::_stylesheets.html.twig' %}
+	  	<link rel="stylesheet" href="{{ asset('bundles/ziki/css/master.css') }}" type="text/css" media="all" />
+	<!--	<link rel="stylesheet" href="{{ asset('bundles/ziki/css/lastfm-overview.css') }}" type="text/css" media="all" />
+		-->
+        {% block stylesheets %}{% endblock %}
+        <style>
+            body {
+                padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+        </style>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    {# Header #}
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/">Ziki</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav ">
+                        <li class="dropdown">
+
+                            <a class="dropdown-toggle" data-toggle="dropdown" title="Click to select a country to access music from" href="#"><strong>Region/Country </strong><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <form class="pull-left form-search">
+                                        {#<input type="text" class="" placeholder="Search for Songs Artists, Genres">#}
+                                        <div class="input-append">
+                                            <input type="text" class="span2 search-query" placeholder="Search Region">
+                                            <button type="submit" class="btn"><i class="icon-search"></i></button>
+                                        </div>
+                                    </form>
+                                </li>
+                                <li class="divider"></li>
+
+                                <li><a href="#">Africa</a></li>
+                                <li><a href="#">Asia</a></li>
+                                <li><a href="#">Europe</a></li>
+
+                                <li class="divider"></li>
+                                <li><a href="#"><img src="/uploads/flags/uganda.png"/> Uganda</a></li>
+                                <li><a href="#">Kenya</a></li>
+                                <li><a href="#">Tanzania</a></li>
+                                {#<li><a href="#">North America</a></li>#}
+                            </ul>
+                        </li>
+                        <li><a href="#contact"><strong>Music</strong></a></li>
+                        <li><a href="#about"><strong> Up Comming Events</strong></a></li>
+
+                        {#<li><a href="#contact"><strong>Find Artists</strong></a></li>#}
+                        {#<li class=""><a href="{{ path('about')}}"><strong>About</strong></a></li>#}
+                    </ul>
+                    <form class="offset1 navbar-search pull-left form-search">
+                        {#<input type="text" class="" placeholder="Search for Songs Artists, Genres">#}
+                        <div class="input-append">
+                            <input type="text" class="span3 search-query" placeholder="Search for Songs Artists, Genres">
+                            <button type="submit" class="btn"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                    <ul class="nav pull-right">
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                            <li> <a href="{{ path('fos_user_profile_show') }}">
+                               <strong><i class="icon-user icon-white"></i> {{ app.user.username }}</strong>
+                            </a>
+                            </li>
+                           <li> <a href="{{ path('fos_user_security_logout') }}">
+                               <strong><i class="icon-share icon-white"></i> Logout</strong>
+                            </a>
+                            </li>
+                        {% else %}
+                            <li><a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a></li>
+                        {% endif %}
+
+                        {#<li>#}
+                            {#{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}#}
+                            {#<a href="{{ path('fos_user_security_logout') }}">#}
+                                {#{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |#}
+
+                                    {#{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}#}
+                                {#</a>#}
+                            {#{% else %}#}
+                                {#<a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>#}
+                            {#{% endif %}#}
+                            {#&#123;&#35;<a href="#"><i class="icon-headphones"></i> Sign In</a>&#35;&#125;#}
+                        {#</li>#}
+
+                        {#<li><a href="#about" class=" "><i class="icon-edit"></i> Create an Account</a></li>#}
+                        <li><img src="/uploads/flags/uganda.png"></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    {# End Header#}
+        {% block body %}{% endblock %}
+        {% include 'BraincraftedBootstrapBundle::_javascripts.html.twig' %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

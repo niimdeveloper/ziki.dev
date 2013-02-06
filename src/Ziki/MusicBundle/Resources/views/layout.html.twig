@@ -1,0 +1,75 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {#&#123;&#35; Header &#35;&#125;#}
+    {#<div class="navbar navbar-inverse navbar-fixed-top">#}
+        {#<div class="navbar-inner">#}
+            {#<div class="container">#}
+                {#<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">#}
+                    {#<span class="icon-bar"></span>#}
+                    {#<span class="icon-bar"></span>#}
+                    {#<span class="icon-bar"></span>#}
+                {#</a>#}
+                {#<a class="brand" href="#">Ziki</a>#}
+                {#<div class="nav-collapse collapse">#}
+                    {#<ul class="nav ">#}
+                        {#<li class=""><a href="#">What is Ziki</a></li>#}
+                        {#<li><a href="#about">Partners</a></li>#}
+                        {#<li><a href="#contact">Contact</a></li>#}
+                    {#</ul>#}
+                    {#<form class="offset1 navbar-search pull-left form-search">#}
+                        {#&#123;&#35;<input type="text" class="" placeholder="Search for Songs Artists, Genres">&#35;&#125;#}
+                        {#<div class="input-append">#}
+                            {#<input type="text" class="span3 search-query" placeholder="Search for Songs Artists, Genres">#}
+                            {#<button type="submit" class="btn"><i class="icon-search"></i></button>#}
+                        {#</div>#}
+                    {#</form>#}
+                    {#<ul class="nav pull-right">#}
+                        {#<li><a href="#"><i class="icon-headphones"></i> Sign In</a></li>#}
+                        {#<li><a href="#about" ><i class="icon-edit"></i> Create an Account</a></li>#}
+                        {#&#123;&#35;<li><a href="#contact">Contact</a></li>&#35;&#125;#}
+                    {#</ul>#}
+                {#</div><!--/.nav-collapse -->#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+    {#&#123;&#35; End Header&#35;&#125;#}
+	<div class="container">
+		<div class="row">
+			<div class="span3">
+                <div class="span3">
+                    {# adds n stuff#}
+                    <h4>Browse Music</h4>
+                    <p><strong>Search</strong></p>
+                    <form class="form-search">
+                        {#<input type="text" class="" placeholder="Search for Songs Artists, Genres">#}
+                        <div class="input-append">
+                            <input type="text" class="span2 search-query" placeholder="Search for Music">
+                            <button type="submit" class="btn"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                    <h4>Most Popular</h4>
+                    <ul class="nav-tabs nav-stacked sidemenu nav">
+                        <li class=""><a href="">Whats Hot</a></li>
+                        <li class=""><a href="">New Relaeses</a></li>
+                        <li class=""><a href="">On the Rise</a></li>
+                        {#<li class=""><a href="">Implementation</a></li>#}
+                    </ul>
+
+                    <h4>Genres</h4>
+                    <ul class="nav-tabs nav-stacked sidemenu nav">
+                        <li class=""><a href="">Afro Pop</a></li>
+                        <li class=""><a href="">Dance Hall</a></li>
+                        <li class=""><a href="">Zouk</a></li>
+                        {#<li class=""><a href="">Implementation</a></li>#}
+                    </ul>
+                </div>
+			</div>
+			<div class="offset1 span8">
+			{% block content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+	
+	
+{% endblock %}

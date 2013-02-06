@@ -1,0 +1,57 @@
+{% extends 'ZikiMusicBundle::layout.html.twig' %}
+
+
+
+{% block content %}
+{# {% include 'ZikiMusicBundle:Partials:artistList.html.twig' %}#}
+<h1 class="text-info">Artists</h1>
+				<ul class="nav recent_activity clearfix ">
+				{% for entity in entities %}
+                    {% include 'ZikiMusicBundle:Partials:artistList.html.twig'
+                    with {'entity': entity}
+                    %}
+                {% endfor %}
+                </ul>
+{# <table class="records_list">#}
+{#     <thead>#}
+{#         <tr>#}
+{#             <th>Id</th>#}
+{#             <th>Alias</th>#}
+{#             <th>Type</th>#}
+{#             <th>Image</th>#}
+{#             <th>Location</th>#}
+{#             <th>Actions</th>#}
+{#         </tr>#}
+{#     </thead>#}
+{#     <tbody>#}
+{#     {% for entity in entities %}#}
+{#         <tr>#}
+{#             <td><a href="{{ path('artist_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>#}
+{#             <td>{{ entity.alias }}</td>#}
+{#             <td>{{ entity.type }}</td>#}
+{#             <td>{{ entity.image }}</td>#}
+{#             <td>{{ entity.location }}</td>#}
+{#             <td>#}
+{#                 <ul>#}
+{#                     <li>#}
+{#                         <a href="{{ path('artist_show', { 'id': entity.id }) }}">show</a>#}
+{#                     </li>#}
+{#                     <li>#}
+{#                         <a href="{{ path('artist_edit', { 'id': entity.id }) }}">edit</a>#}
+{#                     </li>#}
+{#                 </ul>#}
+{#             </td>#}
+{#         </tr>#}
+{#     {% endfor %}#}
+{#     </tbody>#}
+{# </table>#}
+
+{# <ul>#}
+{#     <li>#}
+{#         <a href="{{ path('artist_new') }}">#}
+{#             Create a new entry#}
+{#         </a>#}
+{#     </li>#}
+{# </ul>#}
+
+{% endblock %}

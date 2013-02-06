@@ -1,0 +1,213 @@
+{% extends 'ZikiDefaultBundle::layout.html.twig' %}
+
+{% block container %}
+    <header class="splash">
+        {# new -- splash Header #}
+        <div class="splash-header">
+            <div class="container">
+                <div class="row">
+                    <div class="span5">
+                        <div id="splash-recipe-text" style="color: #fff;">
+                            <h1 class="text-orange">Need new music?</h1>
+                            <p><strong>ziki.com</strong> lets you effortlessly listen to music and keep  record of what you listen to. Based on your taste, ziki.com recommends you more music, and keep track of what events your favourate artists are preparing.<br></p>
+                            <div class="span3 ">
+                                <a href="{{ path('fos_user_registration_register') }}" class="btn btn-signup btn-huge">Get Started</a><br>
+                                <p align="center"><small><strong>Sign up and start today!</strong>.</small> </p>
+                            </div>
+                            {#<div>#}
+                            {#<span >#}
+                            {#<small><strong>Just two minutes to new music!</strong> <br>#}
+                            {#Sign up and start listening to music.</small>#}
+                            {#</span>#}
+                            {#</div>#}
+                            {#<ul class="social clearFix">#}
+                            {#<li> <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fopencooks.com&amp;media=http%3A%2F%2Fopencooks.com/media/screenshot.jpg&amp;description=Food%20%2B%20Language%20%3D%20Opencooks" class="PIN_1359959164056_pin_it_button PIN_1359959164056_pin_it_none" data-pin-aha="button_pinit" data-pin-config="none">#}
+                            {#<span class="PIN_1359959164056_hidden" id="PIN_1359959164056_pin_count_0"><i></i></span>#}
+                            {#</a>#}
+                            {#</li>#}
+                            {#<li class="gp-share">#}
+                            {#<div style="height: 20px; width: 32px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial;" id="___plusone_0">#}
+                            {#<iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 32px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1359959160000" name="I0_1359959160000" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;annotation=none&amp;hl=en&amp;origin=http%3A%2F%2Fopencooks.com&amp;url=http%3A%2F%2Fopencooks.com%2F&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.OdHYDgvBnac.O%2Fm%3D__features__%2Fam%3DQQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTM_7RQ7OQeTq8mj4MdArhj4w7GWvQ#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conload&amp;id=I0_1359959160000&amp;parent=http%3A%2F%2Fopencooks.com" allowtransparency="true" data-gapiattached="true" title="+1"></iframe>#}
+                            {#</div>#}
+                            {#</li>#}
+                            {#<li class="twitter-share">#}
+                            {#<iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1359159993.html#_=1359959160057&amp;count=none&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fopencooks.com%2F&amp;size=m&amp;text=Opencooks.com&amp;url=http%3A%2F%2Fopencooks.com" class="twitter-share-button twitter-count-none" style="width: 56px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe>#}
+                            {#</li>#}
+                            {#<li class="fb-share">#}
+                            {#<div class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="http://opencooks.com" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" fb-xfbml-state="rendered">#}
+                            {#<span style="height: 21px; width: 73px;">#}
+                            {#<iframe id="f1d32ae43" name="f2f599d46" scrolling="no" style="border: none; overflow: hidden; height: 21px; width: 73px;" title="Like this content on Facebook." class="fb_ltr" src="http://www.facebook.com/plugins/like.php?api_key=&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D18%23cb%3Df17b147cc4%26origin%3Dhttp%253A%252F%252Fopencooks.com%252Ffbed26a64%26domain%3Dopencooks.com%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fopencooks.com&amp;node_type=link&amp;width=100&amp;layout=button_count&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false"></iframe>#}
+                            {#</span>#}
+                            {#</div>#}
+                            {#</li>#}
+                            {#</ul>#}
+                        </div>
+                    </div>
+                    <div class="span7">
+                        <div id="splash-recipe-carousel">
+                            <div class="focus"> <div id="myCarousel" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="item">
+                                        <a href="/recipes/8/" class="splash_image">
+                                            <div style="background-color:#fff;">
+                                                <img src="/uploads/slider/splash-6.jpg">
+                                                <div class="carousel-caption"> <h3 class="text-warning">Access it from any device!</h3> </div>
+                                            </div> </a>
+                                        <div class="clearFix">
+                                            {#<a href="/user/23/">#}
+                                            {#<img src="/uploads/slider/splash-3.jpg">#}
+                                            {#</a>#}
+                                            {#<a href="/user/23/" class="author">meiyu</a>#}
+                                            {#<span class="label label-language">English</span>#}
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        {#<a href="/recipes/7/" class="splash_image">#}
+                                        <div style="background-color:#fff;">
+                                            <img src="/uploads/slider/splash-1.jpg">
+                                            <div class="carousel-caption"> <h3 class="text-warning">All your music on the go!</h3> </div>
+                                        </div>
+                                        </a>
+                                        <div class="clearFix">
+                                            {#<a href="/user/19/">#}
+                                            {#<img src="http://www.gravatar.com/avatar/a1808bc34a0df01e008ed818c68d0d72?s=20&amp;r=g&amp;d=http%3A%2F%2Fmedia.opencooks.com%2Fbean20.jpg" class="gravatar_small pull-left" style="margin-right:4px" alt="mikecb">#}
+                                            {#</a>#}
+                                            {#<a href="/user/19/" class="author">mikecb</a>#}
+                                            {#<span class="label label-language">All your music on the go!</span>#}
+                                        </div>
+                                    </div>
+                                    <div class="item active">
+                                        {#<a href="/recipes/4/" class="splash_image">#}
+                                        <div style="background-color:#fff;">
+                                            <img src="/uploads/slider/splash-3.jpg">
+                                            <div class="carousel-caption"> <h3 class="text-warning">Follow the Artists!</h3> </div>
+                                            {#<div class="carousel-caption"> <h3>Fried Chicken (Karaage)</h3> </div>#}
+                                        </div>
+                                        {#</a>#}
+                                        <div class="clearFix" >
+                                            {#<a href="/user/19/">#}
+                                            {#<img src="http://www.gravatar.com/avatar/a1808bc34a0df01e008ed818c68d0d72?s=20&amp;r=g&amp;d=http%3A%2F%2Fmedia.opencooks.com%2Fbean20.jpg" class="gravatar_small pull-left" style="margin-right:4px" alt="mikecb">#}
+                                            {#</a>#}
+                                            {#<a href="/user/19/" class="author">mikecb</a>#}
+                                            {#<span class="label label-language" >Access it from any device</span>#}
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    {# end -- splash#}
+    <hr>
+        <div class="container" style="padding-top: 5px;">
+            <div class="row">
+                <div class="span3">
+                    {# adds n stuff#}
+                    <h4>Browse Music</h4>
+                    <p><strong>Search</strong></p>
+                    <form class="form-search">
+                        {#<input type="text" class="" placeholder="Search for Songs Artists, Genres">#}
+                        <div class="input-append">
+                            <input type="text" class="span2 search-query" placeholder="Search for Music">
+                            <button type="submit" class="btn"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                    <h4>Most Popular</h4>
+                    <ul class="nav-tabs nav-stacked sidemenu nav">
+                        <li class=""><a href="">Whats Hot</a></li>
+                        <li class=""><a href="">New Relaeses</a></li>
+                        <li class=""><a href="">On the Rise</a></li>
+                        {#<li class=""><a href="">Implementation</a></li>#}
+                    </ul>
+
+                    <h4>Genres</h4>
+                    <ul class="nav-tabs nav-stacked sidemenu nav">
+                        <li class=""><a href="">Afro Pop</a></li>
+                        <li class=""><a href="">Dance Hall</a></li>
+                        <li class=""><a href="">Zouk</a></li>
+                        {#<li class=""><a href="">Implementation</a></li>#}
+                    </ul>
+                </div>
+
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <img src="/uploads/slider/artists-news.jpg">
+                        </div>
+                        <div class="span3">
+                            <img src="/uploads/slider/new-music.jpg">
+                        </div>
+                        <div class="span3">
+                            <img src="/uploads/slider/give-aways.jpg">
+                        </div>
+                    </div>
+                    <hr>
+                    {# content#}
+                    <div class="row-fluid">
+                        <div class="span8">
+                            <h4 class="muted"><a href="{{ path('artist') }}">Artists</a></h4>
+                            {#{% render "ZikiMusicBundle:Artist:index" with {'max': 3} %}#}
+                            <ul class="thumbnails">
+                                {% for entity in artists %}
+                                    {#{{ entity.alias }}<br>#}
+                                    <li class="span2">
+                                        <div class="">
+                                            <a href="{{ path('artist_show', { 'id': entity.id }) }}" class="">
+                                                <img src=
+                                                             {% if entity.image %}
+                                                             "/uploads/artists/{{ entity.image }}"
+                                                {% else %}
+                                                    "{{ asset('bundles/ziki/images/blank-profile-pic.jpg') }}"
+                                                {% endif %}
+                                                class="arti img-rounded"  alt="{{ entity.alias }} logo"/>
+                                            </a>
+                                            <div class="caption">
+                                                {#<h3>Thumbnail label</h3>#}
+                                                <p><small>{{ entity.alias }}</small></p>
+                                                <p><a href="{{ path('artist_show', { 'id': entity.id }) }}" class="label label-warning"><i class="icon-picture icon-white"></i> show</a></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            {#<hr>#}
+                            <h4 class="muted"><a href="{{ path('album') }}">Albums</a></h4>
+                            <ul class="thumbnails">
+                                {% for entity in albums %}
+                                    {#{{ entity.alias }}<br>#}
+                                    <li class="span2">
+                                        <div class="">
+                                            <a href="{{ path('album_show', { 'id': entity.id }) }}" class="">
+                                                <img src=
+                                                             {% if entity.image %}
+                                                             "/uploads/albums/{{ entity.image }}"
+                                                {% else %}
+                                                    "{{ asset('bundles/ziki/images/blank-album-pic.jpg') }}"
+                                                {% endif %}
+                                                class="arti img-rounded"  alt="{{ entity.title }} logo"/>
+                                            </a>
+                                            <div class="caption">
+                                                {#<h3>Thumbnail label</h3>#}
+                                                <p><small>{{ entity.title }}</small></p>
+                                                <p><a href="{{ path('album_show', { 'id': entity.id }) }}" class="label label-warning"><i class="icon-picture icon-white"></i> show</a></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+{% endblock %}

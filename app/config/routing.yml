@@ -1,3 +1,38 @@
+ziki_user:
+    resource: "@ZikiUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ziki_default:
+    resource: "@ZikiDefaultBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ziki_music:
+    resource: "@ZikiMusicBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+#FOS Routes
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
 # Internal routing configuration to handle ESI
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"

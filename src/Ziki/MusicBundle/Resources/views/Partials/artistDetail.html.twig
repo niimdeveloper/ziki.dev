@@ -1,0 +1,83 @@
+
+	<div class="row">
+        <ul class="nav recent_activity clearfix ">
+            <li class="clearFix " >
+                <div>
+                    {#<a href="{{ path('artist_show', { 'id': entity.id }) }}">#}
+                    <span class="pull-left">
+				<a href="{{ path('artist_show', { 'id': entity.id }) }}" class="thumbnail">
+                    <img src=
+                                 {% if entity.image %}
+                                 "/uploads/artists/{{ entity.image }}"
+                    {% else %}
+                        "{{ asset('bundles/ziki/images/blank-profile-pic.jpg') }}"
+                    {% endif %}
+                    class="artist-small img-rounded"  alt="{{ entity.alias }} logo"/>
+                </a>
+			</span>
+                    {#</a>#}
+                </div>
+                <div class="clearFix">
+                    <div class="activity-header">
+                        {#<a href="/user/73/"> <img src="http://www.gravatar.com/avatar/4f6ad1d9b863e61c73a31d1a92f679da?s=20&amp;r=g&amp;d=http%3A%2F%2Fmedia.opencooks.com%2Fbean20.jpg" class="gravatar_small pull-left" alt="jcottobboni" style="margin-right:5px;"> </a>#}
+                        <strong>
+                            {#<a href="{{ path('artist_show', { 'id': entity.id }) }}">{{ entity.alias }}</a>#}
+
+
+
+                        </strong>
+
+                        {% for album in entity.albums %}
+                            {% for track in album.tracks %}
+                                <span class="label label-inverse"> {{ track.genre }} </span> &nbsp;
+                            {% endfor %}
+                        {% endfor %}
+                        <div class="pull-right">
+                            <a href="{{ path('artist_show', { 'id': entity.id }) }}" class="label label-warning"><i class="icon-picture icon-white"></i> show</a>
+                            <a href="{{ path('artist_edit', { 'id': entity.id }) }}" class="label label-warning"><i class="icon-edit icon-white"></i> Edit</a>
+                        </div>
+                    </div>
+                    <p><small>{{ entity.description }}</small></p>
+                     {% if entity.albums %}
+                         <hr>
+                         <h4 class="muted">Albums</h4>
+                         {% for entity in entity.albums %}
+                             {% include 'ZikiMusicBundle:Partials:albumList.html.twig'
+                             with {'entity': entity}
+                             %}
+                         {% endfor %}
+
+                    {% endif %}
+                </div>
+            </li>
+        </ul>
+
+		{#<div class="span10">#}
+
+			{#<span class="pull-left">#}
+				{#<a href="{{ path('artist_show', { 'id': entity.id }) }}" class="thumbnail">#}
+					{#<img src=#}
+				{#{% if entity.image %}#}
+					{#"/uploads/artists/{{ entity.image }}" #}
+	        	{#{% else %}#}
+					{#"{{ asset('bundles/ziki/images/blank-profile-pic.jpg') }}"#}
+				{#{% endif %}#}
+					{#class="artist-large img-rounded"  alt="{{ entity.alias }} logo"/>#}
+				{#</a>#}
+			{#</span>#}
+			{#<p> #}
+				{#<small><span class="text-info"><strong>{{ entity.alias }}</strong><br>#}
+				{#<strong>Location</strong> {{ entity.location }}</small><br>#}
+				{#<small>{{ entity.description }}</small></span>#}
+				{#&#123;&#35;<span class="pull-right">#}
+					{#<a href="{{ path('artist_show', { 'id': entity.id }) }}" class="btn btn-small">show</a> #}
+					{#<a href="{{ path('artist_edit', { 'id': entity.id }) }}" class="btn btn-small">edit</a> &#123;&#35; show when logged in&#35;&#125;#}
+					{#&nbsp;#}
+				{#&#123;&#35;</span>&#35;&#125;#}
+			{#</p>#}
+			{##}
+		{#</div>#}
+	{#</div>#}
+
+
+

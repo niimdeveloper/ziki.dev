@@ -1,0 +1,20 @@
+{% extends 'ZikiMusicBundle::layout.html.twig' %}
+
+{% block content %}
+<h1>Band creation</h1>
+
+<form action="{{ path('band_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('band') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

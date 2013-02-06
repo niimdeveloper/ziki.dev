@@ -19,6 +19,11 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+        	new Braincrafted\BootstrapBundle\BraincraftedBootstrapBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Ziki\MusicBundle\ZikiMusicBundle(),
+            new Ziki\DefaultBundle\ZikiDefaultBundle(),
+            new Ziki\UserBundle\ZikiUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
